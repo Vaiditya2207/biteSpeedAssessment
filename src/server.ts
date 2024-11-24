@@ -12,6 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+  res.status(200).send("hello world !!")
+})
 app.use(identityRoutes);
 
 app.listen(PORT, () => {
